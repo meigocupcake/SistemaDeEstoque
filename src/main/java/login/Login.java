@@ -4,6 +4,7 @@
  */
 package login;
 
+import connection.ConnectionFactory;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -31,6 +32,11 @@ public class Login extends HttpServlet{
         
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+        
+        try(var con = ConnectionFactory.getConnection()){
+            String sql = "SELECT * FROM users WHERE username= ?  AND pass= ?";
+        }catch(Exception e){
+        }
         
         if("admin".equals(usuario) && "1234".equals(senha)){
             response.sendRedirect("login.html");
