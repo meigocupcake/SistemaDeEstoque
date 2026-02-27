@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh; /* margem de erro pro mobile */
+    /* background-color: aqua; */
+    
+}
+
+.inputUser {
+    width: 100px;
+    height: 18px;
+    padding-left: 10px;
+
+}
+
+.inputPassword{
+    width: 100px;
+    height: 18px;
+}

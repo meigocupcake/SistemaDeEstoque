@@ -4,6 +4,9 @@
  */
 package connection;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.DriverManager;
 /**
  *
  * @author 015.509576
@@ -20,8 +23,8 @@ public class ConnectionFactory {
     Connection con = null;
     
     try{
-        class.forName(DRIVER);
-        con = DriverManeger.getConection(URL, USER, PASSWORD);
+        Class.forName(DRIVER);
+        con = DriverManager.getConnection(URL, USER, PASSWORD);
         System.out.println("Banco de dados conectado.");
     } catch(Exception e){
         System.out.println("Banco de dados não conectado.");

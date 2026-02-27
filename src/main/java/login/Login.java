@@ -12,6 +12,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -24,26 +26,35 @@ public class Login extends HttpServlet{
     
     private static final long serialVersionUID = 1L;
     
-    //enviando - pego a função e reconheça como (request)
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String usuario = request.getParameter("users");
         String senha = request.getParameter("passw");
         
         response.setContentType("text/html");
+        // printwriter para pooder escrever em html
         PrintWriter out = response.getWriter();
         
-        try(var con = ConnectionFactory.getConnection()){
-            String sql = "SELECT * FROM users WHERE username= ?  AND pass= ?";
-        }catch(Exception e){
-        }
-        
-        if("admin".equals(usuario) && "1234".equals(senha)){
-            response.sendRedirect("login.html");
-            // out.println("<h2>Login realizado!</h2>");
-        } else {
-                out.println("<h2>Usuário ou senha incorreto!");
+        try (var con = ConnectionFactory.getConnection()){
+            String sql = "SELECT * FROM users WHERE username= ? AND psw= ?";
+            
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1, usuario);
+            stmt.setString(2, senha);
+            
+            ResultSet rs = stmt.executeQuery();
+            
+            if(rs.next()){
+            response.sendRedirect("pages/login.html");
+            }else{
+                out.println("<h2>Usuário ou senha inválido.</h2>");
             }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.println("<h2>Erro ao conectar ao bando de dados.</h2>");
+        }
         
     }
 }
