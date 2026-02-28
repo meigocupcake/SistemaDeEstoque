@@ -4,30 +4,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <!--  <link rel="stylesheet" href="css/style.css"> --> 
         <title>Document</title>
     </head>
 
     <body>
             <header>
-                <h1>Sistema de Estoque</h1>
+                <link rel="stylesheet" href="reset.css"/>
+                <link rel="stylesheet" href="color.css"/>
+                <link rel="stylesheet" href="login.css"/>
             </header>
 
-            <main>
+        <main>
                 <form action="login" method="post">
-                    <div class="content"> <!--container (content) do login-->
-                        <div>
-                            <label for="">Login:</label>
-                            <input type="text" name="users" class="inputUser"/>
+                    <div class="container"> <!--container (content) do login-->
+                            <div>
+                                <h1>Login</h1>
+                            </div>
+                            <div>
+                                <label for="">Login:</label>
+                                <input type="text" name="users" class="inputUser"/>
+                            </div>
                             <!--a barra é uma boa pratica para mostrar que o campo nao tem abertura nem fechamento-->
-                        </div>
-                        <div class="password">
-                            <label for="">Senha:</label>
-                            <input type="password" name="passw" class="inputPassword"/>
-                        </div>
-                        <div>
+                            <div>
+                                <label for="">Senha:</label>
+                                <input type="password" name="passw" class="inputPassword"/>
+                            </div>
                             <button type="submit">Entrar</button>
-                        </div>
                     </div>
                 </form>
             </main>

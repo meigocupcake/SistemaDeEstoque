@@ -37,7 +37,7 @@ public class Login extends HttpServlet{
         PrintWriter out = response.getWriter();
         
         try (var con = ConnectionFactory.getConnection()){
-            String sql = "SELECT * FROM users WHERE username= ? AND psw= ?";
+            String sql = "SELECT * FROM users WHERE username= ? AND pass= ?";
             
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, usuario);
