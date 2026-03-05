@@ -13,7 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     <body>
         <header>
             <!-- <img source para por imagem -->
-            <h1>Sistema de Estoque</h1>
+            <h1 id="tituloDashboard">Sistema de Estoque</h1>
             <nav>
                 <ul> <!-- ul - linha não ordenada -->
                     <!-- li = linha -->
@@ -23,44 +23,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </nav>
         </header>
         <main>
-            <section>
-                <div>
-                    <h2>Entrada</h2>
-                    <p>20</p>
+            <section id="resumoEstoque">
+                <div class="card-resumo">
+                    <h2 class="titulo-card">Entrada</h2>
+                    <p class="valor-card">20</p>
                 </div>
-                <div>
-                    <h2>Saída</h2>
-                    <p>5</p>
+                <div class="card-resumo">
+                    <h2 class="titulo-card">Saída</h2>
+                    <p class="valor-card">5</p>
                 </div>
-                 <div>
-                    <h2>Total</h2>
-                    <p>15</p>
+                 <div class="card-resumo">
+                    <h2 class="titulo-card">Total</h2>
+                    <p class="valor-card">15</p>
                 </div>
             </section>
-            <section>
-                <div>
-                    <label>Data</label>
-                    <input type="date">
+            <section id="filtro">
+                <div class="grupo-filtro">
+                    <label for="filtroData">Data</label>
+                    <input type="date" id="filtroData" class="input-filtro">
                 </div>
-                <div>
-                    <label>Tipo</label>
-                    <select>
-                        <option>Selecione uma opção</option>
-                        <option>Selecione uma opção</option>
-                        <option>Selecione uma opção</option>
+                <div class="grupo-filtro">
+                    <label for="tipoMovimentacao">Tipo</label>
+                    <select id="tipoMovimentacao" class="select-filtro">
+                        <option value="">Selecione uma opção</option>
+                        <option value="entrada">Selecione uma opção</option>
+                        <option value="saida">Selecione uma opção</option>
                     </select>
                 </div>
-                <div>
-                    <label>Pesquisar item</label>
-                    <input type="text" placeholder="Digite o nome do item"> <!-- colocar text ao invés de search para tratar pesquisa no js-->
+                <div class="grupo-filtro´pesquisa-nome">
+                    <label for="pesquisaNome">Pesquisar item</label>
+                    <input type="text" id="pesquisarNome" class="input-filtro" placeholder="Digite o nome do item"> <!-- colocar text ao invés de search para tratar pesquisa no js-->
                 </div>
-                <div>
-                    <button>Pesquisar</button>
+                <div class="grupo-filtro´botao-pesquisa" >
+                    <button id="btnPesquisar">Pesquisar</button>
                 </div>
             </section>
-            <section>
-                <div>
-                    <table>
+            <section id="tabelaEstoqueContainer">
+                <div class="tabela-wrapper">
+                    <table id="tabelaEstoque">
                         <thead>
                             <tr>
                                 <th>Código de barras</th>
@@ -72,8 +72,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                 <th>Total</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody id="corpoTabela">
+                            <tr class="linha-item">
                                 <td>123456789</td>
                                 <td>Mouse</td>
                                 <td>Logitech</td>
@@ -82,7 +82,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                 <td>R$ 70</td>
                                 <td>R$ 700</td>
                             </tr>
-                            <tr>
+                            <tr class="linha-item">
                                 <td>987456321</td>
                                 <td>Teclado</td>
                                 <td>Logitech</td>
@@ -95,19 +95,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     </table>
                 </div>
             </section>
-            <section>
-                <div>
-                    <label>Página</label>
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
+            <section id="paginacao">
+                <div class="controle-paginacao">
+                    <label for="pagina">Página</label>
+                    <select id="pagina">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
                     </select>
                 </div>
-                <div>
-                    <button>Voltar</button>
-                    <button>Próximo</button>
+                <div class="container-btn">
+                    <button id="btnVoltar" class="btn-voltar">Voltar</button>
+                    <button id="btnProximo" class="btn-proximo">Próximo</button>
                 </div>
             </section>
         </main>
