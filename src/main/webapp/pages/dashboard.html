@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head> <!-- colocar .. para java dar a dica -->
+        <link rel="stylesheet" href="../css/reset.css"/>
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <!-- <img source para por imagem -->
+            <h1>Sistema de Estoque</h1>
+            <nav>
+                <ul> <!-- ul - linha não ordenada -->
+                    <!-- li = linha -->
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Gerenciamento</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <h2>Entrada</h2>
+                    <p>20</p>
+                </div>
+                <div>
+                    <h2>Saída</h2>
+                    <p>5</p>
+                </div>
+                 <div>
+                    <h2>Total</h2>
+                    <p>15</p>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <label>Data</label>
+                    <input type="date">
+                </div>
+                <div>
+                    <label>Tipo</label>
+                    <select>
+                        <option>Selecione uma opção</option>
+                        <option>Selecione uma opção</option>
+                        <option>Selecione uma opção</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Pesquisar item</label>
+                    <input type="text" placeholder="Digite o nome do item"> <!-- colocar text ao invés de search para tratar pesquisa no js-->
+                </div>
+                <div>
+                    <button>Pesquisar</button>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código de barras</th>
+                                <th>Nome</th>
+                                <th>Fabricante</th>
+                                <th>Marca</th>
+                                <th>Quantidade</th>
+                                <th>Valor unitário</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123456789</td>
+                                <td>Mouse</td>
+                                <td>Logitech</td>
+                                <td>MX</td>
+                                <td>10</td>
+                                <td>R$ 70</td>
+                                <td>R$ 700</td>
+                            </tr>
+                            <tr>
+                                <td>987456321</td>
+                                <td>Teclado</td>
+                                <td>Logitech</td>
+                                <td>MX</td>
+                                <td>5</td>
+                                <td>R$ 200</td>
+                                <td>R$ 1000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <label>Página</label>
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div>
+                    <button>Voltar</button>
+                    <button>Próximo</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

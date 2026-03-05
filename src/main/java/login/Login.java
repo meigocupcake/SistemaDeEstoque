@@ -20,7 +20,7 @@ import java.sql.ResultSet;
  * @author 015.509576
  */
 // ctrl+espaço p atalho
-//servidor
+//servidor - caminho da api? - dificultar, ex? "/api/login5"
 @WebServlet("/login")
 public class Login extends HttpServlet{
     
@@ -36,6 +36,7 @@ public class Login extends HttpServlet{
         // printwriter para pooder escrever em html
         PrintWriter out = response.getWriter();
         
+        //proteção do cog. (erro 405)
         try (var con = ConnectionFactory.getConnection()){
             String sql = "SELECT * FROM users WHERE username= ? AND pass= ?";
             
