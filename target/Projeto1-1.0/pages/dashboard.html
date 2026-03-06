@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
-    <head> <!-- colocar .. para java dar a dica -->
+    <head>
         <link rel="stylesheet" href="../css/reset.css"/>
         <link rel="stylesheet" href="../css/color.css"/>
         <link rel="stylesheet" href="../css/dashboard.css"/>
@@ -14,13 +10,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         <header id="header">
-            <!-- <img source para por imagem -->
-            <h1 id="tituloDashboard">Sistema de Estoque</h1>
+            <h1 id="tituloDashboard">Sistema de estoque</h1>
             <nav>
-                <ul> <!-- ul - linha não ordenada -->
-                    <!-- li = linha -->
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Gerenciamento</a></li>
+                <ul>
+                    <li><a href="#" >Inicio</a></li>
+                    <li><a href="#" >Gerenciamento</a></li>
                 </ul>
             </nav>
         </header>
@@ -28,15 +22,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <section id="resumoEstoque">
                 <div class="card-resumo">
                     <h2 class="titulo-card">Entrada</h2>
-                    <p class="valor-card">20</p>
+                    <p class="valor-card">100</p>
                 </div>
                 <div class="card-resumo">
                     <h2 class="titulo-card">Saída</h2>
-                    <p class="valor-card">5</p>
+                    <p class="valor-card">80</p>
                 </div>
-                 <div class="card-resumo">
+                <div class="card-resumo">
                     <h2 class="titulo-card">Total</h2>
-                    <p class="valor-card">15</p>
+                    <p class="valor-card">20</p>
                 </div>
             </section>
             <section id="filtro">
@@ -48,15 +42,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <label for="tipoMovimentacao">Tipo</label>
                     <select id="tipoMovimentacao" class="select-filtro">
                         <option value="">Selecione uma opção</option>
-                        <option value="entrada">Selecione uma opção</option>
-                        <option value="saida">Selecione uma opção</option>
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saída</option>
                     </select>
                 </div>
-                <div class="grupo-filtro´pesquisa-nome">
-                    <label for="pesquisaNome">Pesquisar item</label>
-                    <input type="text" id="pesquisarNome" class="input-filtro" placeholder="Digite o nome do item"> <!-- colocar text ao invés de search para tratar pesquisa no js-->
+                <div class="grupo-filtro pesquisa-nome">
+                    <label for="pesquisarNome">Pesquisar item</label>
+                    <input type="text" id="pesquisarNome" class="input-filtro" placeholder="Digite o nome do produto" >
                 </div>
-                <div class="grupo-filtro botao-pesquisa" >
+                <div class="grupo-filtro botao-pesquisa">
                     <button id="btnPesquisar" class="btn-pesquisa">Pesquisar</button>
                 </div>
             </section>
@@ -81,17 +75,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                 <td>Logitech</td>
                                 <td>MX</td>
                                 <td>10</td>
-                                <td>R$ 70</td>
-                                <td>R$ 700</td>
+                                <td>R$80,00</td>
+                                <td>R$800,00</td>
                             </tr>
                             <tr class="linha-item">
-                                <td>987456321</td>
+                                <td>123456780</td>
                                 <td>Teclado</td>
                                 <td>Logitech</td>
-                                <td>MX</td>
-                                <td>5</td>
-                                <td>R$ 200</td>
-                                <td>R$ 1000</td>
+                                <td>MXC</td>
+                                <td>10</td>
+                                <td>R$90,00</td>
+                                <td>R$900,00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -107,7 +101,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         <option value="4">4</option>
                     </select>
                 </div>
-                <div class="container-btn">
+                <div class="conteiner-btn">
                     <button id="btnVoltar" class="btn-voltar">Voltar</button>
                     <button id="btnProximo" class="btn-proximo">Próximo</button>
                 </div>
