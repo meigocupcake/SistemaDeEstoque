@@ -6,12 +6,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head> <!-- colocar .. para java dar a dica -->
         <link rel="stylesheet" href="../css/reset.css"/>
+        <link rel="stylesheet" href="../css/color.css"/>
+        <link rel="stylesheet" href="../css/dashboard.css"/>
         <title>Dashboard</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
+        <header id="header">
             <!-- <img source para por imagem -->
             <h1 id="tituloDashboard">Sistema de Estoque</h1>
             <nav>
@@ -54,8 +56,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <label for="pesquisaNome">Pesquisar item</label>
                     <input type="text" id="pesquisarNome" class="input-filtro" placeholder="Digite o nome do item"> <!-- colocar text ao invés de search para tratar pesquisa no js-->
                 </div>
-                <div class="grupo-filtro´botao-pesquisa" >
-                    <button id="btnPesquisar">Pesquisar</button>
+                <div class="grupo-filtro botao-pesquisa" >
+                    <button id="btnPesquisar" class="btn-pesquisa">Pesquisar</button>
                 </div>
             </section>
             <section id="tabelaEstoqueContainer">
