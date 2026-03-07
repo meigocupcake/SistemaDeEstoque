@@ -1,4 +1,6 @@
 C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\com\ds\projeto1\JakartaRestConfiguration.java
 C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\com\ds\projeto1\resources\JakartaEE11Resource.java
 C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\connection\ConnectionFactory.java
-C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\login\Login.java
+C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\controller\LoginServlet.java
+C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\dao\UserDAO.java
+C:\Users\015.509576\Documents\NetBeansProjects\Projeto1\src\main\java\model\UserModel.java
