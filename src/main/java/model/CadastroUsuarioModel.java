@@ -46,7 +46,7 @@ public class CadastroUsuarioModel {
         this.sobrenome = sobrenome;
     }
 
-    public String getCpf() {
+        public String getCpf() {
         return cpf;
     }
 
