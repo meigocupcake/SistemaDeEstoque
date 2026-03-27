@@ -1,6 +1,9 @@
 com\ds\projeto1\resources\JakartaEE11Resource.class
+model\ProdutoMovel.class
 controller\LoginServlet.class
 connection\ConnectionFactory.class
 com\ds\projeto1\JakartaRestConfiguration.class
 model\UserModel.class
 dao\UserDAO.class
+model\CadastroUsuarioModel.class
+model\CadastroProdutoModel.class
