@@ -4,6 +4,8 @@ controller\LoginServlet.class
 connection\ConnectionFactory.class
 com\ds\projeto1\JakartaRestConfiguration.class
 model\UserModel.class
+controller\CadastroController.class
 dao\UserDAO.class
+dao\CadastroUsersDAO.class
 model\CadastroUsuarioModel.class
 model\CadastroProdutoModel.class

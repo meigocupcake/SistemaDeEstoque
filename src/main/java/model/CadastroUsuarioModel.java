@@ -12,6 +12,8 @@ public class CadastroUsuarioModel {
      private int id;
      private String nome;
      private String sobrenome;
+     private String matricula;
+     private String sexo;
      private String cpf;
      private long cep;
      private String endereco;
@@ -20,7 +22,7 @@ public class CadastroUsuarioModel {
      private String cidade;
      private long numero;
      private String complemento;
-     private String nomeUsuario;
+     private String usuario;
      private String senha;
      private String funcao;  
 
@@ -110,12 +112,12 @@ public class CadastroUsuarioModel {
         this.complemento = complemento;
     }
 
-    public String getNomeUsuario() {
-        return nomeUsuario;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setNomeUsuario(String nomeUsuario) {
-        this.nomeUsuario = nomeUsuario;
+    public void setUsuario(String Usuario) {
+        this.usuario = Usuario;
     }
 
     public String getSenha() {
@@ -134,6 +136,21 @@ public class CadastroUsuarioModel {
         this.funcao = funcao;
     }
      
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+     
+     public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
      
 }
 
